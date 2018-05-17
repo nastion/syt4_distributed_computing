@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+
+<hibernate-mapping>  
+	<class name="westbahn.Reservierung"> 
+		<id name="ID" access="field">
+			<generator class="increment"></generator>
+		</id>
+		<property name="datum" type="java.util.Date" access="field" />
+		<property name="praemienMeilenBonus" type="int" access="field" />
+		<property name="preis" type="int" access="field" />
+		<component name="status" class="westbahn.StatusInfo" access="field" />
+		<component name="zahlung" class="westbahn.Zahlung" access="field" />
+		<one-to-one name="zug" class="westbahn.Zug" access="field" />
+		<many-to-one name="strecke" class="westbahn.Strecke" access="field" />
+		<many-to-one name="benutzer" class="westbahn.Benutzer" access="field" />
+	</class>
+</hibernate-mapping> 
