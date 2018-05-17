@@ -1,1 +1,1 @@
-# syt4_distributed_computing
+# Sem8: Distributed Computing DezSys-GK8.3 "Komponentenbasierte Programmierung" (BORM)
